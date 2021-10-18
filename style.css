@@ -37,7 +37,6 @@
   background-color: black;
 }
 
-
 @media screen and (min-width: 1050px) {
   .wrapper div {
     width: 33%

@@ -1,8 +1,12 @@
 .wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-areas:
+      'one two three'
+      'six five four';
+  grid-template-rows: repeat(3, 300px);
+  grid-template-columns: repeat(3, minmax(300px,auto));
   justify-content: center;
+  align-content: center;
 }
 
 .wrapper div {
@@ -17,74 +21,55 @@
 
 .one {
   background-color: red;
+  grid-area: one;
 }
 
 .two {
   background-color: rgb(204, 0, 0);
+  grid-area: two;
 }
 
 .three {
   background-color: rgb(153, 0, 0);
+  grid-area: three;
 }
 
 .four {
-  background-color: rgb(102, 0, 0)
+  background-color: rgb(102, 0, 0);
+  grid-area: four;
 }
 
 .five {
-  background-color: rgb(51, 0, 0)
+  background-color: rgb(51, 0, 0);
+  grid-area: five;
 }
 
 .six {
   background-color: black;
-}
-
-@media screen and (min-width: 1050px) {
-  .wrapper div {
-    width: 33%
-  }
-
-  .four {
-    order: 6;
-  }
-
-  .five {
-    order: 2;
-  }
+  grid-area: six;
 }
 
 @media (min-width: 750px) and (max-width: 1049px) {
-  .wrapper div {
-    width: 50%;
-  }
-
-  .one {
-    order: 1;
-  }
-  
-  .two {
-    order: 2;
-  }
-  
-  .three {
-    order: 4;
-  }
-  
-  .four {
-    order: 3;
-  }
-  
-  .five {
-    order: 5;
-  }
-  
-  .six {
-    order: 6;
+  .wrapper {
+    grid-template-areas:
+        'one two'
+        'four three'
+        'five six';
+    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(2, minmax(300px,auto));
   }
 }
 
-@media (min-width: 450px) and (max-width: 749px) { 
-  .wrapper div {
-    width: 100%;
+@media (min-width: 450px) and (max-width: 749px) {
+  .wrapper {
+    grid-template-areas:
+        'one' 
+        'two'
+        'three'
+        'four'
+        'five' 
+        'six';
+    grid-template-rows: repeat(6, 300px);
+    grid-template-columns: repeat(1, minmax(300px,auto));
   }
 }

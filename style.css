@@ -4,14 +4,13 @@
       'one two three'
       'six five four';
   grid-template-rows: repeat(3, 300px);
-  grid-template-columns: repeat(3, minmax(300px,auto));
+  grid-template-columns: repeat(3, minmax(300px,1fr));
   justify-content: center;
   align-content: center;
 }
 
 .wrapper div {
   height: 300px;
-  min-width: 300px;
   line-height: 300px;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;

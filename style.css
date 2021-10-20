@@ -3,7 +3,6 @@
   grid-template-areas:
       'one two three'
       'six five four';
-  grid-template-rows: repeat(3, 300px);
   grid-template-columns: repeat(3, minmax(300px,1fr));
   justify-content: center;
   align-content: center;
